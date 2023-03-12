@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>sale-create</title>
+</head>
+<body>
+<h2>Sale create</h2>
+<form action="#" th:action="@{/sale-create}" th:object="${sale}" method="post">
+
+    <label for="partId">Part id</label>
+    <input type="text" th:field="*{partId}" id="partId" placeholder="partId id">
+
+
+    <label for="count">Count</label>
+    <input type="number"  th:field="*{count}" id="count" placeholder="Count">
+
+
+    <label for="buyerId">buyerId</label>
+    <input type="text" th:field="*{buyerId}" id="buyerId" placeholder="buyerId">
+
+    <input type="submit" value ="Create Sale">
+
+</form>
+
+</body>
+</html>
