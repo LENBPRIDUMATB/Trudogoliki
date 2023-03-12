@@ -1,9 +1,7 @@
 package RPNJAVA.SpringJAVA.Service;
 
 import RPNJAVA.SpringJAVA.model.Category;
-import RPNJAVA.SpringJAVA.model.Manufacturer;
 import RPNJAVA.SpringJAVA.repository.CategoryRepository;
-import RPNJAVA.SpringJAVA.repository.ManufacturerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
