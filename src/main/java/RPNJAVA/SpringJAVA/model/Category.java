@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "Category")
 public class Category {
+
     @Id
     @Column(name = "name")
     private String name;
