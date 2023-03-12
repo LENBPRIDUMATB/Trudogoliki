@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <ul><li><a href="sale">Sale list</a></li>
+    <li><a href="buyer">Buyer list</a></li>
+    <li><a href="part">Part list</a></li>
+    <li><a href="category">Category list</a></li>
+    <li><a href="manufacturer">Manufacturer list</a></li>
+  </ul>
+  <title>Buyers</title>
+</head>
+<body>
+
+<div th:switch="${buyer}">
+
+  <h2 th:case="null">No users found!</h2>
+  <div th:case="*">
+    <h2>Buyers</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr th:each="buyer : ${buyer}">
+        <td th:text="${buyer.id}"></td>
+        <td th:text="${buyer.name}"></td>
+        <td th:text="${buyer.email}"></td>
+
+
+        <td><a th:href="@{sale-buyer/{id}(id=${buyer.id})}">Statistic</a></td>
+
+
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+</div>
+</body>
+</html>
