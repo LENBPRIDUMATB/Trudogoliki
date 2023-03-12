@@ -22,8 +22,8 @@ public class Sale {
     @Column(name = "buyerId")
     private long buyerId;
 
-    @Column(name = "date")
-    private Date date;
+//    @Column(name = "date")
+//    private Date date;
 
 
 }
