@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>part-create</title>
+</head>
+<body>
+<h2>Part create</h2>
+
+<form action="#" th:action="@{/part-create}" th:object="${part}" method="post">
+
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name">
+
+    <label for="count">Count</label>
+    <input type="number" th:field="*{count}" id="count" placeholder="count">
+
+    <label for="categoryName">categoryName</label>
+    <input type="text" th:field="*{categoryName}" id="categoryName" placeholder="categoryName">
+
+    <label for="manufacturerName">manufacturerName</label>
+    <input type="text" th:field="*{manufacturerName}" id="manufacturerName" placeholder="manufacturerName">
+
+    <input type="submit" value ="Create Part">
+
+</form>
+
+</body>
+</html>

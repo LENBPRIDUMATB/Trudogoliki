@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Update part</title>
+</head>
+<body>
+
+<h2>Part update</h2>
+<form action="#" th:action="@{/part-update}" th:object="${part}" method="post">
+
+
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name">
+
+    <label for="count">Count</label>
+    <input type="number" th:field="*{count}" id="count" placeholder="count">
+
+    <label for="categoryName">categoryName</label>
+    <input type="text" th:field="*{categoryName}" id="categoryName" placeholder="categoryName">
+
+    <label for="manufacturerName">manufacturerName</label>
+    <input type="text" th:field="*{manufacturerName}" id="manufacturerName" placeholder="manufacturerName">
+
+    <input type="submit" value ="Update Part">
+
+
+</form>
+
+</body>
+
+
+</html>

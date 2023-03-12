@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <ul><li><a href="sale">Sale list</a></li>
+        <li><a href="buyer">Buyer list</a></li>
+        <li><a href="part">Part list</a></li>
+        <li><a href="category">Category list</a></li>
+        <li><a href="manufacturer">Manufacturer list</a></li>
+    </ul>
+    <title>Parts</title>
+</head>
+<body>
+<h2>Parts</h2>
+<div th:switch="${part}">
+
+    <h2 th:case="null">No users found!</h2>
+    <div th:case="*">
+
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Count</th>
+                <th>Category</th>
+                <th>Manufacturer</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="part : ${part}">
+                <td th:text="${part.id}"></td>
+                <td th:text="${part.name}"></td>
+                <td th:text="${part.count}"></td>
+                <td th:text="${part.categoryName}"></td>
+                <td th:text="${part.manufacturerName}"></td>
+                <td><a th:href="@{part-update/{id}(id=${part.id})}">Edit</a></td>
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <p><a href="part-create">Create part</a></p>
+
+</div>
+</body>
+</html>

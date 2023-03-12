@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <ul><li><a href="sale">Sale list</a></li>
+        <li><a href="buyer">Buyer list</a></li>
+        <li><a href="part">Part list</a></li>
+        <li><a href="category">Category list</a></li>
+        <li><a href="manufacturer">Manufacturer list</a></li>
+    </ul>
+    <title>Categories</title>
+</head>
+<body>
+
+<div th:switch="${category}">
+
+    <h2 th:case="null">No users found!</h2>
+    <div th:case="*">
+        <h2>Categories</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Info</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="category : ${category}">
+                <td th:text="${category.name}"></td>
+                <td th:text="${category.info}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>
+</body>
+</html>
