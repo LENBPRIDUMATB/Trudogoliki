@@ -1,0 +1,46 @@
+ul {
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+ul > li {
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    padding: 20px 60px;
+    background-color: grey;
+}
+ul > li > a {
+    border: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div {
+    margin: auto auto;
+}
+body > div {
+    margin: 30px auto;
+}
+body > div > p {
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    padding: 20px 60px;
+    background-color: red;
+}
+body > div > p > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 3px;
+}
